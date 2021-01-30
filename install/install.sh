@@ -22,7 +22,6 @@ precheck() {
     fi
 }
 
-
 ### script things
 scriptsetup() {
     echo 'seed ALL=(ALL) NOPASSWD: ALL' >>/tmp/seed
@@ -84,7 +83,6 @@ dockersetup() {
     sudo rm -rf /var/lib/docker/*
     sudo echo "/media/docker-volume.img /var/lib/docker ext4 defaults 0 0" >> /etc/fstab
     sudo mount -a
-
     ## copy docker-compose.yml, .env, and dynamic.yml to their appropriate spots
     sudo cp /opt/scripts/zendrive/docker-compose*.yml /opt/docker
     sudo cp /opt/scripts/zendrive/.env /opt/docker
